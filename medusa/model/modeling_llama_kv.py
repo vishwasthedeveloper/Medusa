@@ -22,16 +22,16 @@ from transformers.pytorch_utils import ALL_LAYERNORM_LAYERS
 from transformers.utils import (
     add_start_docstrings,
     add_start_docstrings_to_model_forward,
-    is_flash_attn_available,
+    #is_flash_attn_available,
     logging,
     replace_return_docstrings,
 )
 from transformers.models.llama.configuration_llama import LlamaConfig
 
 
-if is_flash_attn_available():
-    from flash_attn import flash_attn_func, flash_attn_varlen_func
-    from flash_attn.bert_padding import index_first_axis, pad_input, unpad_input  # noqa
+#if is_flash_attn_available():
+#    from flash_attn import flash_attn_func, flash_attn_varlen_func
+#    from flash_attn.bert_padding import index_first_axis, pad_input, unpad_input  # noqa
 
 
 logger = logging.get_logger(__name__)
