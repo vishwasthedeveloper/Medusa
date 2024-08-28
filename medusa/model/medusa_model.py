@@ -391,7 +391,7 @@ class MedusaModel():
             # MEDUSA-v0.1 load
             config = MedusaConfig.from_pretrained(pretrained_model_name_or_path)
             base_model_config = AutoConfig.from_pretrained(config.base_model_name_or_path)
-            config.model_type = base_model_config.model_type
+            #config.model_type = base_model_config.model_type
 
         if "llama" == "llama":
             return MedusaModelLlama.from_pretrained(
