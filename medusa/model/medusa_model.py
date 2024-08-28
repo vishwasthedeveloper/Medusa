@@ -395,7 +395,7 @@ class MedusaModel():
 
         if config.model_type == "llama":
             return MedusaModelLlama.from_pretrained(
-                pretrained_model_name_or_path,
+                config,
                 *args,
                 **kwargs,
             )
