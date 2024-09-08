@@ -344,7 +344,7 @@ def train():
     )
     tokenizer.pad_token = tokenizer.unk_token
     tokenizer.pad_token = tokenizer.eos_token
-
+    tokenizer.chat_template = "{% for message in messages %}{{'<|im_start|>' + message['role'] + '\n' + message['content'] + '<|im_end|>' + '\n'}}{% endfor %}"
     # Making sure the tokenizer works before loading the model.
     print(tokenizer(["This is a test", "secondary"], padding=True))
     print(tokenizer.apply_chat_template([{"role": "user", "content": "This is a test"}]))
